@@ -43,15 +43,17 @@ Partial Class frmStudent
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.panSearchList = New System.Windows.Forms.Panel()
+        Me.lstStudents = New System.Windows.Forms.ListBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtStuIDSearch = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.panSearchList = New System.Windows.Forms.Panel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.lstStudents = New System.Windows.Forms.ListBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btntemp = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -258,6 +260,34 @@ Partial Class frmStudent
         Me.Panel4.Size = New System.Drawing.Size(503, 302)
         Me.Panel4.TabIndex = 0
         '
+        'panSearchList
+        '
+        Me.panSearchList.Controls.Add(Me.lstStudents)
+        Me.panSearchList.Controls.Add(Me.Label3)
+        Me.panSearchList.Location = New System.Drawing.Point(21, 114)
+        Me.panSearchList.Name = "panSearchList"
+        Me.panSearchList.Size = New System.Drawing.Size(464, 168)
+        Me.panSearchList.TabIndex = 17
+        '
+        'lstStudents
+        '
+        Me.lstStudents.FormattingEnabled = True
+        Me.lstStudents.ItemHeight = 16
+        Me.lstStudents.Location = New System.Drawing.Point(15, 33)
+        Me.lstStudents.Name = "lstStudents"
+        Me.lstStudents.Size = New System.Drawing.Size(439, 116)
+        Me.lstStudents.TabIndex = 17
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Lucida Console", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(7, 5)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(448, 15)
+        Me.Label3.TabIndex = 16
+        Me.Label3.Text = "The following Students match the search criteria:"
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(179, 66)
@@ -310,39 +340,31 @@ Partial Class frmStudent
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "Student ID:"
         '
-        'panSearchList
+        'Button1
         '
-        Me.panSearchList.Controls.Add(Me.lstStudents)
-        Me.panSearchList.Controls.Add(Me.Label3)
-        Me.panSearchList.Location = New System.Drawing.Point(21, 114)
-        Me.panSearchList.Name = "panSearchList"
-        Me.panSearchList.Size = New System.Drawing.Size(464, 168)
-        Me.panSearchList.TabIndex = 17
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label3
+        'btntemp
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Lucida Console", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(7, 5)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(448, 15)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "The following Students match the search criteria:"
-        '
-        'lstStudents
-        '
-        Me.lstStudents.FormattingEnabled = True
-        Me.lstStudents.ItemHeight = 16
-        Me.lstStudents.Location = New System.Drawing.Point(15, 33)
-        Me.lstStudents.Name = "lstStudents"
-        Me.lstStudents.Size = New System.Drawing.Size(439, 116)
-        Me.lstStudents.TabIndex = 17
+        Me.btntemp.Location = New System.Drawing.Point(728, 443)
+        Me.btntemp.Name = "btntemp"
+        Me.btntemp.Size = New System.Drawing.Size(75, 23)
+        Me.btntemp.TabIndex = 17
+        Me.btntemp.Text = "temp"
+        Me.btntemp.UseVisualStyleBackColor = True
         '
         'frmStudent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1052, 487)
+        Me.Controls.Add(Me.btntemp)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.Panel1)
@@ -393,4 +415,6 @@ Partial Class frmStudent
     Friend WithEvents panSearchList As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents lstStudents As ListBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btntemp As Button
 End Class

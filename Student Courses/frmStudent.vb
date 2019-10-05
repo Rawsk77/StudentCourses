@@ -149,5 +149,22 @@ Public Class frmStudent
 
     End Sub
 
+    Private Sub namesearch()
+        Dim lines As New List(Of String)
+        Using sr As New StreamReader("student.txt")
+            While Not sr.EndOfStream
+                lines.Add(sr.ReadLine)
+            End While
+        End Using
 
+        For Each line In lines
+            For Each item In line.Split(",")
+                lstStudents.Items.Add(item)
+            Next item
+        Next line
+    End Sub
+
+    Private Sub Btntemp_Click(sender As Object, e As EventArgs) Handles btntemp.Click
+        namesearch()
+    End Sub
 End Class
